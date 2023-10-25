@@ -11,7 +11,7 @@ public class TesteVetorDinamico {
             vetor.AdicaoElemento(dado);
             // vetor.AdicaoElemento(Integer.parseInt(JOptionPane.showInputDialog("Coloque: ")));
             vetor.Exibir();
-            System.out.println("-----------------------------");
+            System.out.println("\n -----------------------------");
             Thread.sleep(5000);
         }
     }

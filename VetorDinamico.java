@@ -18,10 +18,31 @@ public class VetorDinamico {
             "Qtde: %d\nCap: %d\n", qtde, cap
         );
 
-        for (int e : elementos) {
-            System.out.printf("%d ", e);
+        for (int i = 0; i < qtde; i++) {
+            System.out.printf("%d ", elementos[i]);
         }
     }
 
+    private void aumentarCapacidade() {
+        var aux = new int[cap * 2];
+        for (int i = 0; i < qtde; i++){
+            aux[i] = elementos[i];
+        }
+        elementos = aux;
+        cap *= 2;
+    }
+
+    private boolean estaCheio(){
+        return qtde == cap;
+    }
+
+    private boolean estaVazio(){
+        return qtde == 0;
+    }
+
+    public void remover(){
+        if(!estaVazio())
+            qtde--;
+    }
     public static void main(String[] args) {}
 }
